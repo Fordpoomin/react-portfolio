@@ -1,0 +1,114 @@
+.contact_wrapper {
+    height: 500px;
+    background-color: #0085FF;
+    color: #fff;
+    overflow: hidden;
+
+    & .contact_con {
+        max-width: 1170px;
+        margin: 50px auto 0;
+        display: flex;
+        justify-content: space-between;
+
+        & .contact_info {
+            width: 420px;
+
+            & h3 {
+                font-size: 32px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            & .contact_desc {
+                margin-bottom: 20px;
+            }
+
+            & .contact_address {
+                margin-bottom: 20px;
+            }
+        }
+
+        & .contact_form {
+            width: 520px;
+
+            & label {
+                display: block;
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            & .input_group {
+                display: flex;
+                justify-content: space-between;
+
+                & input[type="text"] {
+                    width: 250px;
+                    height: 40px;
+                    border-radius: 5px;
+                    padding: 15px;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            & input[type="email"] {
+                width: 100%;
+                height: 40px;
+                border-radius: 5px;
+                padding: 15px;
+                border: none;
+                outline: none;
+            }
+
+            & textarea {
+                width: 100%;
+                height: 100px;
+                border-radius: 5px;
+                padding: 15px;
+                border: none;
+                outline: none;
+            }
+
+            & button {
+                width: 100px;
+                height: 40px;
+                background-color: #fff;
+                border: none;
+                border-radius: 5px;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact_wrapper {
+        height: auto;
+
+        & .contact_con {
+            flex-direction: column;
+
+            & .contact_info, & .contact_form {
+                width: 100%;
+                padding: 20px;
+            }
+
+            & .contact_form {
+
+                & input {
+                    width: 100% !important;
+                }
+
+                & .input_group {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
